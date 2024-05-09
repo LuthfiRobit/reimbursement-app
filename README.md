@@ -72,10 +72,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 4. Change the database connection in the **.env** file to be as below
 
 DB_CONNECTION=pgsql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=5432
+
 DB_DATABASE=db_reimbursement
+
 DB_USERNAME=postgres //adjust to the username you have
+
 DB_PASSWORD= //adjust to the password you have
 
 5. Create a new database according to the database name in the **.env** file "**db_reimbursement**"
@@ -87,7 +92,10 @@ DB_PASSWORD= //adjust to the password you have
 10. Please log in using your NIP and Password based on the table below
 
 NIP	| NAMA | JABATAN | PASSWORD
+
 1234 | DONI	| DIREKTUR | 123456
+
 1235 | DONO	| FINANCE | 123456
+
 1236 | DONA	| STAFF | 123456
 
