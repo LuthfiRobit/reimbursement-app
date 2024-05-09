@@ -64,3 +64,30 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Instalation
+1. Clone available projects
+2. Run the **composer install** command
+3. Duplicate the file and replace the **.env.example** file with **.env**
+4. Change the database connection in the **.env** file to be as below
+
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=db_reimbursement
+DB_USERNAME=postgres //adjust to the username you have
+DB_PASSWORD= //adjust to the password you have
+
+5. Create a new database according to the database name in the **.env** file "**db_reimbursement**"
+
+6. Run the **php artisan key:generate** command
+7. Run the **php artisan migrate** command
+8. Run the **php artisan db:seed** command
+9. Run the **php artisan serve** command
+10. Please log in using your NIP and Password based on the table below
+
+NIP	| NAMA | JABATAN | PASSWORD
+1234 | DONI	| DIREKTUR | 123456
+1235 | DONO	| FINANCE | 123456
+1236 | DONA	| STAFF | 123456
+
