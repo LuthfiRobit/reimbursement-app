@@ -13,7 +13,7 @@
                     }
                     if (response.data.file_reimbursement == '' || response.data.file_reimbursement ==
                         null) {
-                        file = "{{ asset('assets/media/logos/logo.png') }}";
+                        file = "{{ asset('files/file_example.jpg') }}";
                     }
                     $("#show_data_nama_karyawan").text(response.data.karyawan.name);
                     $("#show_data_nama_reimbursement").text(response.data.nama_reimbursement);
