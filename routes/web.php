@@ -21,8 +21,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
-Route::get('/', [ReimbursementController::class, 'home']);
-
 Route::group(['middleware' => 'guest'], function () {
     Route::get('login', [AuthController::class, 'login'])->name('login');
     Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
@@ -30,6 +28,9 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::middleware(['auth'])->group(
     function () {
+
+        Route::get('/', [ReimbursementController::class, 'home']);
+
         Route::prefix('karyawan')->name('karyawan.')->middleware('can:direktur-role')->group(function () {
             Route::get('/', [KaryawanController::class, 'index'])->name('index');
             Route::get('/list', [KaryawanController::class, 'list'])->name('list');
